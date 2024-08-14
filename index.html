@@ -27,3 +27,32 @@
 <title>🌿livraria🌱</title>
 
 </head>
+
+<header class="header scroll_header content">
+    <!-- api de clima -->
+    <Section class="clima">
+      <section class="setcity">
+        <label for="cep">Clima:</label>
+        <div class="input-box">
+          <input type="number" id="cep" placeholder="CEP: 00000000">
+          <button id="set">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </section>
+      <section class="resultado">
+        <div class="city"></div>
+        <div class="condicoes">
+          <div class="temp"><span></span>&deg;C</div>
+          <div class="humidade"><i class="fa-solid fa-droplet"></i> <span></span></div>
+          <div class="iconClima"><img id="condicao-icon" src=""></div>
+          <!-- <div id="vento"><i class="fa-solid fa-wind"></i><span>12</span>km/h</div> -->
+        </div>
+      </Section>
+      <section class="erro">
+        <p>tente novamente mais tarde</p>
+      </section>
+      <section class="load">
+        <div></div>
+      </section>
+    </section>
