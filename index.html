@@ -1,2 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #00308a;
+            padding: 5px 40px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .hero {
+            background-color: #e2e2e2;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+        }
+
+        .products-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+
+        .product {
+            display: inline-block;
+            width: 200px;
+            margin: 0 10px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .product button {
+            background-color: #00308a;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .product button:hover {
+            background-color: #575757;
+        }
+
+        footer {
+            background-color: #00308a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#books"></a>
+            <a class="nav-link" href="#children-books"></a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <div class="container">
+            <h1>Bem-vindo à Livraria Online</h1>
+            <p>Descubra uma vasta coleção de livros ao seu alcance de forma acessível e grátis.</p>
+            <p>PS: Não assumimos responsabilidade por qualquer dado clonado.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 id="books">Livros em Destaque</h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81TmHlRleJL._AC_UF1000.jpg" alt="Livro 1" width="200">
+                <h3>Jujutsu no Kaisen</h3>
+                <p>Autor: Gege Akutami</p>
+                <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61YQD6u5liL._AC_UF1000.jpg" alt="Livro 2" width="191">
+                <h3>Kaiju nº 8</h3>
+                <p>Autor: Naoya Matsumoto</p>
+                <button onclick="alert('Livro 2 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/91zj0WZtIYL._AC_UF1000.jpg" alt="Livro 3" width="270">
+                <h3>Divina Comédia</h3>
+                <p>Autor: Dante Alighieri</p>
+                <button onclick="alert('Livro 3 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81OYRZEQG7L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="" width="200">
+                <h3>Solo leving</h3>
+                <p>Autor: Chu-Gong</p>
+                <button onclick="alert('Livro 4 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51Fe45NGwkL._SY466_.jpg" alt="Livro 3" height="" width="200">
+                <h3>A Arte da Guerra</h3>
+                <p>Autor: Sun Tzu</p>
+                <button onclick="alert('Livro 5 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/518mqZ7A31L._SY445_SX342_.jpg" alt="Livro 3" height="" width="200">
+                <h3>Harry Potter e Pedra Filosofal</h3>
+                <p>Autor: J.K Rowling</p>
+                <button onclick="alert('Livro 6 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41kT95iZ81L._SY445_SX342_.jpg" alt="Livro 3" height="20" width="200">
+                <h3>Harry Potter e o Prisioneiro de Azkaban</h3>
+                <p>Autor: J.K Rowling</p>
+                <button onclick="alert('Livro 7 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41RBd2DvmgL._SY445_SX342_.jpg" alt="Livro 3" height="" width="200">
+                <h3>O Senhor dos Aneis a Sociedade dos Aneis</h3>
+                <p>Autor: Tolkien</p>
+                <button onclick="alert('Livro 8 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81slUinjTlS._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="" width="200">
+                <h3>O Alquimista</h3>
+                <p>Autor: Paulo Coelho</p>
+                <button onclick="alert('Livro 9 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/815Bx8hFodL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="" width="200">
+                <h3>Livro 10</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 10 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81diwihAz6L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="20" width="200">
+                <h3>Livro 11</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 11 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81022XMXiKL._SY466_.jpg" alt="Livro 3" height="" width="200">
+                <h3>Livro 12</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 12 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://xfs-n11.xfsbb.com/thumb/W600/ampi/99b/99b2792b329e798776ae91e49c586b0eea44d99b_600_900_522160.jpeg" alt="Livro 3" height="" width="200">
+                <h3>Livro 13</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 13 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPHYHLodx69-90NPjqyU_n_DoOKcjblr8Qw&s" alt="Livro 3" height="" width="200">
+                <h3>Livro 14</h3>
+                <p>Autor: </p>
+                <button onclick="alert('Livro 14 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+     <div class="container">
+        <h2 id="books">Livros Infantis</h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81TmHlRleJL._AC_UF1000.jpg" alt="Livro 1" width="200">
+                <h3>Jujutsu no Kaisen</h3>
+                <p>Autor: Gege Akutami</p>
+                <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61YQD6u5liL._AC_UF1000.jpg" alt="Livro 2" width="200">
+                <h3>Kaiju nº 8</h3>
+                <p>Autor: Naoya Matsumoto</p>
+                <button onclick="alert('Livro 2 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/91zj0WZtIYL._AC_UF1000.jpg" alt="Livro 3" width="200">
+                <h3>Divina Comédia</h3>
+                <p>Autor: Dante Alighieri</p>
+                <button onclick="alert('Livro 3 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81OYRZEQG7L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="" width="285">
+                <h3>Solo leving</h3>
+                <p>Autor: Chu-Gong</p>
+                <button onclick="alert('Livro 4 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51Fe45NGwkL._SY466_.jpg" alt="Livro 3" height="" width="181">
+                <h3>A Arte da Guerra</h3>
+                <p>Autor: Sun Tzu</p>
+                <button onclick="alert('Livro 5 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/518mqZ7A31L._SY445_SX342_.jpg" alt="Livro 3" height="" width="193">
+                <h3>Harry Potter e Pedra Filosofal</h3>
+                <p>Autor: J.K Rowling</p>
+                <button onclick="alert('Livro 6 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41kT95iZ81L._SY445_SX342_.jpg" alt="Livro 3" height="20" width="200">
+                <h3>Harry Potter e o Prisioneiro de Azkaban</h3>
+                <p>Autor: J.K Rowling</p>
+                <button onclick="alert('Livro 7 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41RBd2DvmgL._SY445_SX342_.jpg" alt="Livro 3" height="" width="187">
+                <h3>O Senhor dos Aneis a Sociedade dos Aneis</h3>
+                <p>Autor: Tolkien</p>
+                <button onclick="alert('Livro 8 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81slUinjTlS._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="" width="191">
+                <h3>O Alquimista</h3>
+                <p>Autor: Paulo Coelho</p>
+                <button onclick="alert('Livro 9 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/815Bx8hFodL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="" width="194">
+                <h3>Livro 10</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 10 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81diwihAz6L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3" height="20" width="185">
+                <h3>Livro 11</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 11 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81022XMXiKL._SY466_.jpg" alt="Livro 3" height="" width="">
+                <h3>Livro 12</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 12 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://xfs-n11.xfsbb.com/thumb/W600/ampi/99b/99b2792b329e798776ae91e49c586b0eea44d99b_600_900_522160.jpeg" alt="Livro 3" height="" width="">
+                <h3>Livro 13</h3>
+                <p>Autor: Autor 3</p>
+                <button onclick="alert('Livro 13 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPHYHLodx69-90NPjqyU_n_DoOKcjblr8Qw&s" alt="Livro 3" height="" width="">
+                <h3>Livro 14</h3>
+                <p>Autor: </p>
+                <button onclick="alert('Livro 14 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>&copy; 2024 Livraria Online</footer>
+..................................................................................
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
      
