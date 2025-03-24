@@ -236,6 +236,64 @@ Pedra Filosofal</h3>
                 });
             });
         });
+
+     // Manipulação de eventos de teclado
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        // Fechar modais ao pressionar ESC
+        closeAllModals();
+    }
+});
+
+// Atualizar estados ARIA dinamicamente
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const button = document.getElementById('menu-button');
+    const isExpanded = menu.getAttribute('aria-expanded') === 'true';
+    
+    menu.setAttribute('aria-expanded', !isExpanded);
+    button.setAttribute('aria-expanded', !isExpanded);
+    
+    if (!isExpanded) {
+        menu.querySelector('a').focus();
+    }
+}
+
+// Gerenciar foco em modais
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.setAttribute('aria-hidden', 'false');
+    
+    // Salvar elemento que tinha foco antes de abrir o modal
+    const previousActiveElement = document.activeElement;
+    modal.dataset.previousActiveElement = previousActiveElement.id;
+    
+    // Mover foco para o modal
+    modal.focus();
+    
+    // Capturar foco dentro do modal
+    modal.addEventListener('keydown', trapTabKey);
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.setAttribute('aria-hidden', 'true');
+    
+    // Restaurar foco para o elemento anterior
+    const previousActiveElementId = modal.dataset.previousActiveElement;
+    if (previousActiveElementId) {
+        document.getElementById(previousActiveElementId).focus();
+    }
+    
+    // Remover listener
+    modal.removeEventListener('keydown', trapTabKey);
+}
+
+function trapTabKey(e) {
+    if (e.key === 'Tab') {
+        // Implementar armadilha de foco para tecla Tab
+    }
+}
     </script>
 </body>
 </html>
