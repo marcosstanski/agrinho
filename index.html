@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria agrinho</title>
+    <title>Livraria Agrinho</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
+            font-size: 16px; /* Tamanho padrão da fonte */
+            transition: font-size 0.3s; /* Transição suave para mudanças de tamanho */
         }
 
         header {
@@ -110,21 +112,36 @@
             width: 100%;
             bottom: 0;
         }
+
+        .accessibility-button {
+            background-color: #4CAF50; /* Cor do botão */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000; /* Para garantir que o botão fique acima de outros elementos */
+        }
     </style>
 </head>
 <body>
     <header>
+        <nav>
             <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="#books"></a>
-            <a class="nav-link" href="#children-books"></a>
+            <a class="nav-link" href="#books">Livros</a>
+            <a class="nav-link" href="#children-books">Livros Infantis</a>
         </nav>
+        <button class="accessibility-button" id="increase-font">Aumentar Fonte</button>
+        <button class="accessibility-button" id="decrease-font">Diminuir Fonte</button>
     </header>
 
     <div class="hero" id="home">
         <div class="container">
             <h1>Bem-vindo ✌</h1>
             <p>Ache os livros que eu tive vontade de colocar 🤣🤣 </p>
-            
         </div>
     </div>
 
@@ -132,169 +149,34 @@
         <h2 id="books">Livros em Destaque</h2>
         <div class="products-container">
             <div class="product">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaP5uuYfJ_cG0DVUKQRyPqzsqqUr_TYr827W2LzekNBWEPrBQrrfRkSVTh&s=10" alt="Livro 1" width="200">
-                
- <h3>A Guerra dos mundos</h3>
-<p> </p> 
-               <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaP5uuYfJ_cG0DVUKQRyPqzsqqUr_TYr827W2LzekNBWEPrBQrrfRkSVTh&s=10" alt="Capa do livro A Guerra dos Mundos" width="200">
+                <h3>A Guerra dos Mundos</h3>
+                <p>Uma clássica história de ficção científica.</p>
+                <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
             </div>
-            <div class="product">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV-TLVtKCDNF4eMEOFRYUF5PhLWeGqHMWYwg&s" alt="Livro 2" width="191">
-                
- <h3>O pequeno principe</h3>
-<p> </p> 
-               <button onclick="alert('Livro 2 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYDoatgXwTm9g_FPRamqSWhO1ReLKrp7e-FZFOdyZGiFI2YIm-w7z_A2Y&s=10" alt="Livro 3" width="270">
-   
-<h3>O diária de um banana </h3>
-<p> </p>              
-                <button onclick="alert('Livro 3 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71+fh2vstSL._AC_UF1000,1000_QL80_.jpg" alt="Livro 4" height="" width="200">
-                
- <h3>O diário de um banana: <br>
-Rodrick é o cara</h3>
-<p> </p> 
-               <button onclick="alert('Livro 4 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfVIiY9RKusAROKRkVsJKdKB12WNcfdC67tD_ydkUOyRiucaWH3XYHcE&s=10" alt="Livro 5" height="" width="200">
-  
-<h3>Heróis de Novigrath </h3>
-<p> </p>              
-                <button onclick="alert('Livro 5 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/518mqZ7A31L._SY445_SX342_.jpg" alt="Livro 6" height="" width="200">
-                <h3>Harry Potter e a <br>
-Pedra Filosofal</h3>
-                <p></p>
-                <button onclick="alert('Livro 6 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/41kT95iZ81L._SY445_SX342_.jpg" alt="Livro 7" height="20" width="200">
-                <h3>Harry Potter e <br>
-                    o Prisioneiro de Azkaban</h3>
-                <p></p>
-                <button onclick="alert('Livro 7 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/41RBd2DvmgL._SY445_SX342_.jpg" alt="Livro 8" height="" width="200">
-                <h3>O Senhor dos Aneis <br>
-                    a Sociedade dos Aneis</h3>
-                <p></p>
-                <button onclick="alert('Livro 8 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                
-
-                <img src="https://m.media-amazon.com/images/I/617iS--XOQL._AC_UF1000,1000_QL80_.jpg" alt="Livro 9" height="" width="200">
-                <h3>As 48 leis do poder</h3>
-                <p></p>
-                <button onclick="alert('Livro 9 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/91M9xPIf10L._AC_UF1000,1000_QL80_.jpg" alt="Livro 10" height="20" width="200">
-                <h3>O Hobbit</h3>
-                <p></p>
-                <button onclick="alert('Livro 10 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71bbpGX9PVL._AC_UF1000,1000_QL80_.jpg" alt="Livro 11" height="" width="200">
-                <h3>Como fazer amigos<br>
-                     e influenciar pessoas</h3>
-                <p></p>
-                <button onclick="alert('Livro 11 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51Fe45NGwkL._AC_UF1000,1000_QL80_.jpg" alt="Livro 12" height="" width="200">
-                <h3>arte da guerra</h3>
-                <p></p>
-                <button onclick="alert('Livro 12 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51gzQL9BBgL._AC_UF1000,1000_QL80_.jpg" alt="Livro 13" height="" width="200">
-                <h3>O jovem principe</h3>
-                <p></p>
-                <button onclick="alert('Livro 13 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
+            <!-- Adicione mais produtos aqui com descrições -->
         </div>
     </div>
 
-    <footer>&copy; 2024 Livraria Online</footer>
-..................................................................................
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    <footer>&copy; <span id="year"></span> Livraria Online</footer>
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Funções para aumentar e diminuir o tamanho da fonte
+        let currentFontSize = 16; // Tamanho padrão da fonte
+
+        document.getElementById('increase-font').addEventListener('click', function() {
+            currentFontSize += 2; // Aumenta o tamanho da fonte
+            document.body.style.fontSize = currentFontSize + 'px';
         });
 
-     // Manipulação de eventos de teclado
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        // Fechar modais ao pressionar ESC
-        closeAllModals();
-    }
-});
-
-// Atualizar estados ARIA dinamicamente
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    const button = document.getElementById('menu-button');
-    const isExpanded = menu.getAttribute('aria-expanded') === 'true';
-    
-    menu.setAttribute('aria-expanded', !isExpanded);
-    button.setAttribute('aria-expanded', !isExpanded);
-    
-    if (!isExpanded) {
-        menu.querySelector('a').focus();
-    }
-}
-
-// Gerenciar foco em modais
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.setAttribute('aria-hidden', 'false');
-    
-    // Salvar elemento que tinha foco antes de abrir o modal
-    const previousActiveElement = document.activeElement;
-    modal.dataset.previousActiveElement = previousActiveElement.id;
-    
-    // Mover foco para o modal
-    modal.focus();
-    
-    // Capturar foco dentro do modal
-    modal.addEventListener('keydown', trapTabKey);
-}
-
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.setAttribute('aria-hidden', 'true');
-    
-    // Restaurar foco para o elemento anterior
-    const previousActiveElementId = modal.dataset.previousActiveElement;
-    if (previousActiveElementId) {
-        document.getElementById(previousActiveElementId).focus();
-    }
-    
-    // Remover listener
-    modal.removeEventListener('keydown', trapTabKey);
-}
-
-function trapTabKey(e) {
-    if (e.key === 'Tab') {
-        // Implementar armadilha de foco para tecla Tab
-    }
-}
+        document.getElementById('decrease-font').addEventListener('click', function() {
+            if (currentFontSize > 10) { // Impede que o tamanho da fonte fique muito pequeno
+                currentFontSize -= 2; // Diminui o tamanho da fonte
+                document.body.style.fontSize = currentFontSize + 'px';
+            }
+        });
     </script>
 </body>
 </html>
-     
