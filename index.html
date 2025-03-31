@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             background-color: #ffffff;
-            font-size: 16px; /* Tamanho padrão da fonte */
-            transition: font-size 0.3s; /* Transição suave para mudanças de tamanho */
+            font-size: 16px; 
+            transition: font-size 0.3s; 
         }
 
         header {
@@ -154,7 +154,6 @@
                 <p>Uma clássica história de ficção científica.</p>
                 <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
             </div>
-            <!-- Adicione mais produtos aqui com descrições -->
         </div>
     </div>
 
@@ -163,17 +162,17 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Funções para aumentar e diminuir o tamanho da fonte
-        let currentFontSize = 16; // Tamanho padrão da fonte
+       
+        let currentFontSize = 16; 
 
         document.getElementById('increase-font').addEventListener('click', function() {
-            currentFontSize += 2; // Aumenta o tamanho da fonte
+            currentFontSize += 2; 
             document.body.style.fontSize = currentFontSize + 'px';
         });
 
         document.getElementById('decrease-font').addEventListener('click', function() {
-            if (currentFontSize > 10) { // Impede que o tamanho da fonte fique muito pequeno
-                currentFontSize -= 2; // Diminui o tamanho da fonte
+            if (currentFontSize > 10) { 
+                currentFontSize -= 2; 
                 document.body.style.fontSize = currentFontSize + 'px';
             }
         });
